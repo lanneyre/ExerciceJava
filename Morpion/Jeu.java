@@ -44,9 +44,13 @@ public class Jeu {
     }
 
     public static void main(String[] args) {
-        Joueur joueur1 = new Joueur("Joueur 1", 'X');
-        Joueur joueur2 = new Joueur("Joueur 2", 'O');
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nom du premier joueur");
+        Joueur joueur1 = new Joueur(sc.nextLine(), 'X');
+        System.out.println("Nom du second joueur");
+        Joueur joueur2 = new Joueur(sc.nextLine(), 'O');
         Jeu jeu = new Jeu(joueur1, joueur2);
         jeu.jouer();
+        sc.close();
     }
 }
