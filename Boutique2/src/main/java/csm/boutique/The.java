@@ -1,6 +1,5 @@
 package csm.boutique;
 
-import java.util.LinkedHashMap;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -26,15 +25,4 @@ public class The extends Produit {
         System.out.println("Nom : " + getNom() + ", Prix : " + getPrix() + ", Quantité : " + getQuantite() + ", Type : " + type);
     }
 
-    // @Override 
-    // public LinkedHashMap getdetailsArray(){
-    //     LinkedHashMap  m = new LinkedHashMap(4);
-    //     m.put("nom", this.getNom());
-    //     m.put("prix", this.getPrix());
-    //     m.put("quantite", this.getQuantite());
-    //     m.put("type", this.getType());
-
-    //     return m;
-
-    // }
 }

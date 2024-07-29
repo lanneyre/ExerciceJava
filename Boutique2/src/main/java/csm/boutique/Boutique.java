@@ -47,7 +47,7 @@ public class Boutique {
         try {
             //je créé une ressource vers le fichier json
             PrintWriter pw = new PrintWriter("Produits.json");
-            TypeReference typeToSave = new TypeReference<List<Produit>>() {};
+            TypeReference<List<Produit>> typeToSave = new TypeReference<List<Produit>>() {};
             mapper.writerFor(typeToSave).writeValue(pw, produits);
         } catch (Exception  e) {
             System.out.println("erreur : " +e.getMessage());
