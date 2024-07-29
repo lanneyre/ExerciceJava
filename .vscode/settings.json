@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "Boutique2",
+        "Boutique2\\src\\main\\java"
+    ],
+    "java.project.referencedLibraries": [
+        "Boutique2/lib/json-simple-1.1.1.jar"
+    ]
+}

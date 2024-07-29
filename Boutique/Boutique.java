@@ -1,8 +1,8 @@
 import java.util.ArrayList;
-import java.util.List;
+import org.json.simple.*;
 
 public class Boutique {
-    private List<Produit> produits;
+    private final ArrayList<Produit> produits;
 
     public Boutique() {
         this.produits = new ArrayList<>();
@@ -16,6 +16,18 @@ public class Boutique {
         for (Produit produit : produits) {
             produit.afficherDetails();
         }
+    }
+
+    public void saveListe(){
+        String jsonStr = JSONArray.toJSONString(list);
+        try { 
+            String jsonArray 
+                = objectMapper.writeValueAsString(courses); 
+            System.out.println(jsonArray); 
+        } 
+        catch (JsonProcessingException e) { 
+            e.printStackTrace(); 
+        } 
     }
 
     public void passerCommande(String nomProduit, int quantite) {

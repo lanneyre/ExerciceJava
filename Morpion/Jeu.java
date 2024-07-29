@@ -39,6 +39,13 @@ public class Jeu {
             }
 
             joueurCourant = (joueurCourant == joueur1) ? joueur2 : joueur1;
+
+            if(joueurCourant == joueur1){
+                joueurCourant = joueur2;
+            } else {
+                joueurCourant = joueur1;
+            }
+            
         }
         scanner.close();
     }

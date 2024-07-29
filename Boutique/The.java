@@ -1,5 +1,5 @@
 public class The extends Produit {
-    private String type; // Vert, Noir, Oolong, etc.
+    private final String type; // Vert, Noir, Oolong, etc.
 
     public The(String nom, double prix, int quantite, String type) {
         super(nom, prix, quantite);

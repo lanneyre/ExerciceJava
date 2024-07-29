@@ -1,5 +1,5 @@
 public class Accessoire extends Produit {
-    private String description;
+    private final String description;
 
     public Accessoire(String nom, double prix, int quantite, String description) {
         super(nom, prix, quantite);
