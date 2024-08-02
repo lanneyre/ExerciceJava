@@ -1,9 +1,11 @@
 {
     "java.project.sourcePaths": [
         "Boutique2",
-        "Boutique2\\src\\main\\java"
+        "Boutique2\\src\\main\\java",
+        "Boutique3",
+        "Boutique3\\src\\main\\java"
     ],
     "java.project.referencedLibraries": [
-        "Boutique2/lib/json-simple-1.1.1.jar"
+        "c:\\Users\\lanney\\OneDrive - CCI de PACA\\Java\\ExercicesJava\\Boutique2\\lib\\json-simple-1.1.1.jar"
     ]
 }

@@ -10,7 +10,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper; 
 
 public class Boutique {
-    private final ArrayList<Produit> produits;
+    private ArrayList<Produit> produits;
 
     public Boutique() {
         this.produits = new ArrayList<>();
@@ -29,10 +29,7 @@ public class Boutique {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             InputStream input = new FileInputStream("Produits.json");
-            List<Produit> listeProduitsFromJSON = objectMapper.readValue(input, new TypeReference<List<Produit>>() {});
-            for (Produit p : listeProduitsFromJSON) {
-                produits.add(p);
-            }
+            produits = objectMapper.readValue(input, new TypeReference<ArrayList<Produit>>() {});
         } catch(FileNotFoundException e){
             System.out.println("erreur");
         } catch(Exception e){
