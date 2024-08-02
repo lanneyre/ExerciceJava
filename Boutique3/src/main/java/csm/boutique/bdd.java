@@ -6,14 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.HashMap;
 
-public class bdd {
+public class Bdd {
     public static Connection con = null;
 
     public static Connection getCon () throws SQLException{
-        if(bdd.con == null){
-            bdd.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/theboutique", "theboutique", "3QicZi82K@dkTm9H");
+        if(Bdd.con == null){
+            Bdd.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/theboutique", "theboutique", "3QicZi82K@dkTm9H");
         }
-        return bdd.con;
+        return Bdd.con;
     }
 
     public static PreparedStatement getPreparedStmt(String requete){
@@ -27,7 +27,7 @@ public class bdd {
         preparedstmt.put("getCategorieById", "SELECT * FROM `categories` WHERE `Id`=? LIMIT 1"); 
          
         try {
-            Connection con = bdd.getCon();
+            Connection con = Bdd.getCon();
             return con.prepareStatement(preparedstmt.get(requete));
         } catch (SQLException ex) {
             ex.printStackTrace();

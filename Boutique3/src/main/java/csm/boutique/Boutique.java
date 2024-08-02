@@ -28,7 +28,7 @@ public class Boutique {
        try {
             // use con here
             produits.clear();
-            Connection con = bdd.getCon();
+            Connection con = Bdd.getCon();
             System.out.println("connexion réussie");
             Statement stmt = con.createStatement();
             String selectSql = "SELECT * FROM produits"; 

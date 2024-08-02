@@ -44,7 +44,7 @@ public class Categorie {
     public static Categorie categorieById(int IdCat){
         try  {
                         
-            PreparedStatement pstmt = bdd.getPreparedStmt("getCategorieById");
+            PreparedStatement pstmt = Bdd.getPreparedStmt("getCategorieById");
             pstmt.setInt(1, IdCat);
             ResultSet resultSet = pstmt.executeQuery();
             resultSet.next();
@@ -67,9 +67,9 @@ public class Categorie {
     public void save(){
         try {
             if (this.id == 0) {
-                pstmtSave = bdd.getPreparedStmt("createCategorie");
+                pstmtSave = Bdd.getPreparedStmt("createCategorie");
             } else {
-                pstmtSave = bdd.getPreparedStmt("updateCategorie");
+                pstmtSave = Bdd.getPreparedStmt("updateCategorie");
                 pstmtSave.setInt(3, this.id);
             }
             pstmtSave.setString(1, this.nom);

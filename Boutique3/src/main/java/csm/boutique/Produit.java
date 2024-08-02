@@ -64,7 +64,7 @@ public class Produit{
 
     public static Produit produitById(int IdProd){
         try {
-            PreparedStatement pstmt = bdd.getPreparedStmt("getProduitById");
+            PreparedStatement pstmt = Bdd.getPreparedStmt("getProduitById");
 
             pstmt.setInt(1, IdProd);
             ResultSet resultSet = pstmt.executeQuery();
@@ -101,9 +101,9 @@ public class Produit{
     public void save(){
         try {
             if (this.id == 0) {
-                pstmtSave = bdd.getPreparedStmt("createProduit");
+                pstmtSave = Bdd.getPreparedStmt("createProduit");
             } else {
-                pstmtSave = bdd.getPreparedStmt("updateProduit");
+                pstmtSave = Bdd.getPreparedStmt("updateProduit");
                 pstmtSave.setInt(6, this.id);
             }
             pstmtSave.setString(1, this.nom);
